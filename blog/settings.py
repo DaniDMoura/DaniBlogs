@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-b$g(*m65jwf3^jv*ieff9r7(s_&o0go_pk0wlgm2_alp&)qf23"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['daniblogs-production.up.railway.app']
 
 AUTH_USER_MODEL = "blog_app.Signup"
 
