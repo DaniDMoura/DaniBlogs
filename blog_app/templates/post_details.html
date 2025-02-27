@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card text-center" style="margin-bottom:30px;min-height:470px">
+    <div class="card-header">
+      {{post.title}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">
+        {% autoescape off %}{{ post.content|linebreaks }}{% endautoescape %}
+      </p>
+    </div>
+    <div class="card-footer text-body-secondary">{{post.date_published}}</div>
+  </div>
+{% endblock %}
+

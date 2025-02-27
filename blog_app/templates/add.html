@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card" style="max-width: 600px; margin: 30px auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+    <div class="card-body">
+      <form method="POST" action="{% url 'add_post' %}" style="text-align:left">
+        {% csrf_token %}
+        <div class="form-group" style="margin:20px;">
+          <label for="exampleFormControlInput1"><p style="font-size:17px">Title</p></label>
+          <input class="form-control"  name="title"   id="exampleFormControlInput1" placeholder="Enter the post title" required>
+        </div>
+        <div class="form-group" style="margin:20px;">
+          <label for="exampleFormControlTextarea1"><p style="font-size:17px">Content</p></label>
+          <textarea class="form-control" id="exampleFormControlTextarea1"  name="content" rows="8" placeholder="Write your post content here" required></textarea>
+        </div>
+        <button style="margin:20px 0; width: 100%;" type="submit" class="btn btn-outline-success btn-lg">Create</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+

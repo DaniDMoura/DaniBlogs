@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content_nav %}
+<form class="d-flex" method="POST" action="{% url 'post_list' %}">
+  {% csrf_token %}
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+{% endblock %}
+
+{% block content %}
+  {% for post in posts %}
+      <a href="{% url 'post_detail' post.slug %}" class="btn btn-link" style="text-decoration: none;">
+        <div class="card border-light mb-3" style="width: 470px; height: 170px;">
+          <div class="card-header">{{post.date_published}}</div>
+          <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">{{post.truncated_content}}</p>
+          </div>
+        </div>
+      </a>
+  {% endfor %}
+{% endblock %}
+
