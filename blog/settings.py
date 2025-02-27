@@ -29,6 +29,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['daniblogs-production.up.railway.app']
 
+CSRF_TRUSTED_ORIGINS = ['daniblogs-production.up.railway.app']
+
 AUTH_USER_MODEL = "blog_app.Signup"
 
 LOGIN_URL = "/login/"
