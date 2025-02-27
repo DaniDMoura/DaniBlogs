@@ -27,7 +27,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['daniblogs-production.up.railway.app']
+ALLOWED_HOSTS = ['https://daniblogs-production.up.railway.app/']
 
 CSRF_TRUSTED_ORIGINS = ['https://daniblogs-production.up.railway.app']
 
